@@ -13,13 +13,13 @@ namespace Embedly.Caching
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        Task<Response> Get(UrlRequest request);
+        Task<Response> Get(string url);
 
         /// <summary>
         /// Caches the response for the specified request.
         /// </summary>
         /// <param name="request">The request.</param>
         /// <param name="response">The response.</param>
-        Task Put(UrlRequest request, Response response);
+        Task Put(string url, Response response);
     }
 }
