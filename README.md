@@ -1,6 +1,6 @@
 # Embed.ly client for .NET Standard / .NET Core
 
-Asynchronous, ASP.NET Core clinet for embed.ly
+Asynchronous, ASP.NET Core client for embed.ly
 
 ## Getting Started
 Install the [embedly-client](https://www.nuget.org/packages/embedly-client) library through [NuGet](https://nuget.org).
