@@ -1,9 +1,10 @@
 {
   "name": "embedly-client",
   "title": "Embed.ly Client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [ "Alexandru Puiu" ],
   "description": "Embed.ly Client for .NET Core",
+  "projectUrl": "https://github.com/terrasynq/embedly-netstandard",
 
   "packOptions": {
     "repository": { "url": "https://github.com/terrasynq/embedly-netstandard" },
@@ -12,29 +13,15 @@
 
   "dependencies": {
     "NETStandard.Library": "1.6.0",
-    "System.Runtime.Serialization.Primitives": "4.1.1",
+    "Microsoft.Extensions.Logging.Abstractions": "1.0.0",
     "Microsoft.Extensions.Configuration": "1.0.0",
     "Microsoft.Extensions.Configuration.Json": "1.0.0",
-    "System.Net.Requests": "4.0.11",
-    "System.Threading.ThreadPool": "4.0.10",
-    "System.Net.Http": "4.1.0",
-    "System.Runtime.Serialization.Json": "4.0.2",
-    "System.Linq": "4.1.0",
-    "System.Collections.Immutable": "1.2.0",
-    "Microsoft.Extensions.Caching.Memory": "1.0.0",
-    "System.Linq.Queryable": "4.0.1",
-    "System.Interactive.Async": "3.0.0",
-    "Microsoft.Extensions.Logging.Abstractions": "1.0.0",
-    "System.Linq.Parallel": "4.0.1",
     "System.Text.Encodings.Web": "4.0.0",
-    "System.Runtime": "4.1.0"
+    "System.Runtime.Serialization.Json": "4.0.2"
   },
 
   "frameworks": {
     "netstandard1.6": {
-      "System.IO": "4.1.0",
-      "System.Private.DataContractSerialization": "4.1.1",
-      "System.Runtime": "4.1.0"
     }
   }
 }
