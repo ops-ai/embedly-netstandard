@@ -1,5 +1,5 @@
 # Embed.ly client for .NET Standard / .NET Core
-================
+
 Asynchronous, ASP.NET Core clinet for embed.ly
 
 ## Getting Started
