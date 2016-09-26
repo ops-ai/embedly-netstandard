@@ -39,3 +39,4 @@ node_modules
 *~
 /logs
 /npm-debug.log
+/test/embedly-tests/appsettings.Test.json

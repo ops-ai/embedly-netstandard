@@ -42,7 +42,7 @@ namespace Embedly
         {
             using (var client = new HttpClient())
             {
-                var payload = await(await client.GetAsync($"https://api.embedly.com/{_apiVersion}/extract?key={_apiKey}&format=json&maxwidth={_maxWidth}&maxheight={_maxHeight}&url={UrlEncoder.Default.Encode(url)}")).Content.ReadAsStringAsync();
+                var payload = await(await client.GetAsync($"https://api.embed.ly/{_apiVersion}/oembed?key={_apiKey}&format=json&maxwidth={_maxWidth}&maxheight={_maxHeight}&url={UrlEncoder.Default.Encode(url)}")).Content.ReadAsStringAsync();
 
                 var obj = JsonConvert.DeserializeObject<Response>(payload);
                 switch (obj.Type)
