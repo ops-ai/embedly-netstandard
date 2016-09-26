@@ -30,6 +30,13 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
   
 ```
 
+## Version 1.0.2
+* Added unit tests
+* Fixed embedly service used for OEmbeds
+
+## Version 1.0.1
+* Removed unused nuget packages
+
 ## Version 1.0.0
 * Created embedly client for AspNet Standard/Core
 
