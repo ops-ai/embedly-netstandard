@@ -30,6 +30,9 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
   
 ```
 
+## Version 1.0.3
+* Added support for embed.ly extract
+
 ## Version 1.0.2
 * Added unit tests
 * Fixed embedly service used for OEmbeds
