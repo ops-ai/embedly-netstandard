@@ -1,9 +1,13 @@
-﻿using System.Threading.Tasks;
+﻿using Embedly.OEmbed;
+using EmbedlyClient.Extract;
+using System.Threading.Tasks;
 
 namespace Embedly
 {
     public interface IEmbedlyService
     {
-        Task<OEmbed.IEmbedContent> LoadContent(string url);
+        Task<IEmbedContent> LoadContent(string url);
+
+        Task<EmbedExtract> ExtractContent(string url);
     }
 }
