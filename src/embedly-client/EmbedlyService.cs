@@ -1,7 +1,9 @@
 ﻿using Embedly.OEmbed;
+using EmbedlyClient.Extract;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Net.Http;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
@@ -63,6 +65,22 @@ namespace Embedly
                     default:
                         return JsonConvert.DeserializeObject<EmbedError>(payload);
                 }
+            }
+        }
+
+        public async Task<EmbedExtract> ExtractContent(string url)
+        {
+            var jsonSettings = new JsonSerializerSettings()
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+                DefaultValueHandling = DefaultValueHandling.Populate
+            };
+
+            using (var client = new HttpClient())
+            {
+                var payload = await (await client.GetAsync($"https://api.embed.ly/{_apiVersion}/extract?key={_apiKey}&format=json&maxwidth={_maxWidth}&maxheight={_maxHeight}&url={UrlEncoder.Default.Encode(url)}")).Content.ReadAsStringAsync();
+
+                return JsonConvert.DeserializeObject<EmbedExtract>(payload, jsonSettings);
             }
         }
     }

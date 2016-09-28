@@ -19,5 +19,15 @@ namespace Embedly.OEmbed
         /// </summary>
         [DataMember(Name = "height")]
         public int Height { get; private set; }
+
+        #region Optional Media fields.
+
+        /// <summary>
+        /// Age restrictions, valid values include variations of 18+, 13+, R, PG. Only present if populated.
+        /// </summary>
+        [DataMember(Name = "age_restriction")]
+        public string AgeRestriction { get; set; }
+
+        #endregion
     }
 }
