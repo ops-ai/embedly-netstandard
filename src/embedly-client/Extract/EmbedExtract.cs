@@ -121,7 +121,7 @@ namespace EmbedlyClient.Extract
             get { return null; }
             set
             {
-                if (!value.HasValues)
+                if (value == null || !value.HasValues)
                     return;
 
                 var obj = value.ToObject<Response>();
