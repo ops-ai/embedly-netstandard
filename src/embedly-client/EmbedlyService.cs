@@ -47,7 +47,7 @@ namespace Embedly
         {
             using (var client = new HttpClient())
             {
-                var payload = await(await client.GetAsync($"https://api.embed.ly/{_apiVersion}/oembed?key={_apiKey}&format=json&maxwidth={_maxWidth}&maxheight={_maxHeight}&url={UrlEncoder.Default.Encode(url)}")).Content.ReadAsStringAsync();
+                var payload = await(await client.GetAsync($"https://api.embed.ly/{_apiVersion}/oembed?key={_apiKey}&format=json&maxwidth={_maxWidth}&maxheight={_maxHeight}&url={Uri.EscapeDataString(url)}")).Content.ReadAsStringAsync();
 
                 var obj = JsonConvert.DeserializeObject<Response>(payload);
                 switch (obj.Type)
@@ -81,7 +81,7 @@ namespace Embedly
 
             using (var client = new HttpClient())
             {
-                var payload = await (await client.GetAsync($"https://api.embed.ly/{_apiVersion}/extract?key={_apiKey}&format=json&maxwidth={_maxWidth}&maxheight={_maxHeight}&url={UrlEncoder.Default.Encode(url)}")).Content.ReadAsStringAsync();
+                var payload = await (await client.GetAsync($"https://api.embed.ly/{_apiVersion}/extract?key={_apiKey}&format=json&maxwidth={_maxWidth}&maxheight={_maxHeight}&url={Uri.EscapeDataString(url)}")).Content.ReadAsStringAsync();
 
                 return JsonConvert.DeserializeObject<EmbedExtract>(payload, jsonSettings);
             }
@@ -92,7 +92,16 @@ namespace Embedly
         {
             if (urls.Length > 10)
                 throw new ArgumentException("The number of urls cannot exceed 10");
-            var urlList = urls.Aggregate((acc, next) => acc + "," + UrlEncoder.Default.Encode(next));
+
+            var urlList = urls.Aggregate("", (acc, next) =>
+            {
+                if (string.IsNullOrWhiteSpace(next))
+                    return acc;
+
+                return (acc == "")
+                    ? Uri.EscapeDataString(next)
+                    : acc + "," + Uri.EscapeDataString(next);
+            }); ;
 
             var jsonSettings = new JsonSerializerSettings()
             {
