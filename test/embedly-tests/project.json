@@ -5,15 +5,12 @@
     "xunit": "2.2.0-beta2-build3300",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "Microsoft.AspNetCore.TestHost": "1.0.0",
-    "embedly-client": "1.0.2"
+    "embedly-client": "1.0.4"
   },
   "frameworks": {
     "netcoreapp1.0": {
       "imports": [
-        "netcoreapp1.0",
-        "netstandard1.6",
-        "dnxcore50",
-        "portable-net452+win81"
+
       ],
       "dependencies": {
         "Microsoft.NETCore.App": {

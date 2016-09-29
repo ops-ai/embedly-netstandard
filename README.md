@@ -30,6 +30,10 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
   
 ```
 
+## Version 1.0.4
+* Added support for multiple url extract
+* Added .NET Framework 4.6
+
 ## Version 1.0.3
 * Added support for embed.ly extract
 

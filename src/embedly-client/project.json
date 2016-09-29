@@ -1,7 +1,7 @@
 {
   "name": "embedly-client",
   "title": "Embed.ly Client",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "authors": [ "Alexandru Puiu" ],
   "description": "Embed.ly Client for .NET Core",
   "projectUrl": "https://github.com/terrasynq/embedly-netstandard",
@@ -12,16 +12,20 @@
   },
 
   "dependencies": {
-    "NETStandard.Library": "1.6.0",
     "Microsoft.Extensions.Logging.Abstractions": "1.0.0",
     "Microsoft.Extensions.Configuration": "1.0.0",
     "Microsoft.Extensions.Configuration.Json": "1.0.0",
     "System.Text.Encodings.Web": "4.0.0",
-    "System.Runtime.Serialization.Json": "4.0.2"
+    "System.Net.Http": "4.1.0"
   },
 
   "frameworks": {
-    "netstandard1.6": {
+    "netstandard1.3": {
+    },
+    "net46": {
+      "dependencies": {
+        "System.Runtime.Serialization.Primitives": "4.1.1"
+      }
     }
   }
 }

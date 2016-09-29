@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{60CF2667-C7FB-4027-86F9-E00310FC41C1}"
 	ProjectSection(SolutionItems) = preProject
 		..\test\global.json = ..\test\global.json
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "embedly-client", "embedly-client\embedly-client.xproj", "{80A747A5-A74E-45FE-AD3E-7A74323DE4F9}"
