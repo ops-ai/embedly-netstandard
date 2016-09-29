@@ -4,6 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
@@ -81,6 +84,27 @@ namespace Embedly
                 var payload = await (await client.GetAsync($"https://api.embed.ly/{_apiVersion}/extract?key={_apiKey}&format=json&maxwidth={_maxWidth}&maxheight={_maxHeight}&url={UrlEncoder.Default.Encode(url)}")).Content.ReadAsStringAsync();
 
                 return JsonConvert.DeserializeObject<EmbedExtract>(payload, jsonSettings);
+            }
+        }
+
+        // Has to be used carefully, doesn't work with LexisNexis urls
+        public async Task<List<EmbedExtract>> ExtractContent(string[] urls)
+        {
+            if (urls.Length > 10)
+                throw new ArgumentException("The number of urls cannot exceed 10");
+            var urlList = urls.Aggregate((acc, next) => acc + "," + UrlEncoder.Default.Encode(next));
+
+            var jsonSettings = new JsonSerializerSettings()
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+                DefaultValueHandling = DefaultValueHandling.Populate
+            };
+
+            using (var client = new HttpClient())
+            {
+                var payload = await (await client.GetAsync($"https://api.embed.ly/{_apiVersion}/extract?key={_apiKey}&format=json&maxwidth={_maxWidth}&maxheight={_maxHeight}&urls={urlList}")).Content.ReadAsStringAsync();
+
+                return JsonConvert.DeserializeObject<List<EmbedExtract>>(payload, jsonSettings);
             }
         }
     }
