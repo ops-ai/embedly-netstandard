@@ -30,6 +30,9 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
   
 ```
 
+## Version 1.0.5
+* Replaced UrlEncoder.Default.Encode with Uri.EscapeDataString
+
 ## Version 1.0.4
 * Added support for multiple url extract
 * Added .NET Framework 4.6

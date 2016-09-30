@@ -1,7 +1,7 @@
 {
   "name": "embedly-client",
   "title": "embed.ly Client",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "authors": [ "Alexandru Puiu" ],
   "description": "embed.ly Client for .NET Core",
   "projectUrl": "https://github.com/terrasynq/embedly-netstandard",
