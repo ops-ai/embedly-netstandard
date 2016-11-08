@@ -8,6 +8,7 @@
         html,
         text,
         image,
+        photo,
         video,
         audio,
         rss,

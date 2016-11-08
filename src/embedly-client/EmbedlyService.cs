@@ -52,6 +52,7 @@ namespace Embedly
                 switch (obj.Type)
                 {
                     case ResourceType.image:
+                    case ResourceType.photo:
                         return JsonConvert.DeserializeObject<EmbedPhoto>(payload);
                     case ResourceType.video:
                         return JsonConvert.DeserializeObject<EmbedVideo>(payload);
