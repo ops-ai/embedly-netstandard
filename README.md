@@ -2,6 +2,15 @@
 
 Asynchronous, ASP.NET Core client for embed.ly
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ops-ai_embedly-standard&metric=alert_status)](https://sonarcloud.io/dashboard?id=ops-ai_embedly-standard)
+[![Build Status](https://opsai.visualstudio.com/BeyondAuth/_apis/build/status/ops-ai.embedly-netstandard?branchName=develop)](https://opsai.visualstudio.com/BeyondAuth/_build/latest?definitionId=8&branchName=develop)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ops-ai_embedly-standard&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=ops-ai_embedly-standard)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ops-ai_embedly-standard&metric=coverage)](https://sonarcloud.io/dashboard?id=ops-ai_embedly-standard)
+![CodeQL](https://github.com/ops-ai/embedly-netstandard/workflows/CodeQL/badge.svg)
+
+[![NuGet Status](https://img.shields.io/nuget/v/embedly-client.svg?style=flat)](https://www.nuget.org/packages/embedly-client/)
+[![NuGet Count](https://img.shields.io/nuget/dt/embedly-client.svg)](https://www.nuget.org/packages/embedly-client/)
+
 ## Getting Started
 Install the [embedly-client](https://www.nuget.org/packages/embedly-client) library through [NuGet](https://nuget.org).
 
