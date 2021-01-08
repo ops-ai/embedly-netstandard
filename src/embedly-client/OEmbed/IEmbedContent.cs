@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Embedly.OEmbed
+﻿namespace Embedly.OEmbed
 {
     /// <summary>
     /// Represents an oEmbed result

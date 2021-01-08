@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace embedly_tests
+namespace Embedly_client.Tests
 {
 
     public class EmbedlyClientFixture : IDisposable

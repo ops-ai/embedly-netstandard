@@ -1,13 +1,13 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using System;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EmbedlyClient")]
+[assembly: AssemblyCompany("opsAI")]
+[assembly: AssemblyProduct("embedly-standard")]
 [assembly: AssemblyTrademark("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
@@ -16,4 +16,6 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("80a747a5-a74e-45fe-ad3e-7a74323de4f9")]
+[assembly: Guid("d6c86273-942b-4be7-8764-fa4567f19c9a")]
+
+[assembly: CLSCompliant(true)]
